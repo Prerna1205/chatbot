@@ -1,38 +1,313 @@
-.App {
-  text-align: center;
+/* Chatbot.css */
+
+.chatbot-container {
+  padding: 10px;
+  max-width: 800px;
+  margin: 0 auto;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  overflow: hidden;
+  width: 100%;
+  background-color: rgb(252, 248, 248);
+  min-height: 40vh;
+}
+.chatLogo
+{
+  margin-right:10px ;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.message.unread {
+  background-color: #eef;
+  border-left: 3px solid rgb(255, 0, 13);
+}
+.chatbot-container p {
+  color: rgb(156, 152, 152);
+}
+.container {
+  padding: 10px;
+}
+.messages-container {
+  max-height: 300px;
+  overflow-y: auto;
+  padding: 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.message {
+  margin-bottom: 10px;
+  padding: 8px 12px;
+  border-radius: 5px;
+  max-width: 70%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.user {
+  background-color: #007bff;
+  color: #fff;
+  align-self: flex-end;
+}
+.container-bot {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: flex-end;
+}
+.container-user {
+  display: flex;
+  justify-content: flex-start;
+}
+.bot {
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+.input-container {
+  display: flex;
+  padding: 10px;
+}
+
+.input-container input {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.input-container button {
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.input-container button:hover {
+  background-color: #0056b3;
+}
+.header {
+  display: flex;
+  flex-direction: row;
+  align-self: stretch;
+  justify-content: flex-start;
+  padding: 5px;
+  font-size: large;
+  font-family: Epilogue;
+  font-size: 24px;
+  line-height: 36px;
+  font-weight: 700;
+  color: #171a1fff;
+}
+
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+  width: 50%;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #9136fa;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.navBodyContainer {
+  display: flex;
+  color: black;
+  background-color: white;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 20px;
+  min-height: 90vh;
+ 
+}
+.divContainer {
+  background-color: #fff;
+  padding: 16px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 500px;
+}
+.text {
+  top: 24px;
+  left: 24px;
+  font-family: Epilogue;
+  font-size: 24px;
+  line-height: 36px;
+  font-weight: 700;
+  color: #171a1fff;
+}
+.fileUploadLabel {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100px;
+  border: grey dashed 2px;
+}
+
+.uploadButton {
+  margin: 5px;
+  background-color: #5837eb;
+  color: white !important;
+  font-weight: bold;
+  font-family: "Inter";
+}
+.analyticsBox {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+/* CustomStyles.css */
+
+.custom-table-container {
+  margin: 4px;
+  overflow-x: auto;
+}
+
+.custom-table {
+  margin: 4px;
+  width: 100%;
+  border-collapse: collapse; /* For a more compact table design */
+}
+
+.custom-table th,
+.custom-table td {
+  text-align: left; /* Adjust text alignment as needed */
+  padding: 12px; /* Adjust cell padding */
+  border-bottom: 1px solid #dee2e6; /* For a subtle row separation */
+}
+
+.custom-table th {
+  background-color: #f8f9fa; /* Header background color */
+  color: #333; /* Header text color */
+}
+
+.custom-table tbody tr:hover {
+  background-color: #f2f2f2; /* Row hover effect */
+}
+
+.custom-table-striped tbody tr:nth-of-type(odd) {
+  background-color: #f9f9f9; /* Zebra-striping for rows */
+}
+
+/* styles.css */
+.navBodyContainer {
+  padding: 16px;
+  background-color: #f7f7f7;
+}
+/* Cloud upload 2 */
+.icon {
+ 
+  width: 20px;
+  fill: #6e7787ff;
+}
+.file-upload {
+  border: 2px dashed #ccc;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  margin: 20px 0;
+}
+.barClass
+{
+  overflow-x: scroll;
+}
+
+.analyticsBox {
+  margin-top: 20px;
+}
+
+.table-responsive {
+  background-color: #fff;
+  padding: 25px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.custom-table {
+  width: 100%;
+  background-color: #fff;
+  text-align: left;
+  border-collapse: collapse;
+}
+
+.custom-table thead {
+  background-color: #eee;
+}
+
+.custom-table th,
+.custom-table td {
+  padding: 8px;
+  border: 1px solid #ddd;
+}
+
+.custom-table-striped tbody tr:nth-of-type(odd) {
+  background-color: #f9f9f9;
+}
+
+/* React bootstrap overrides */
+.btn {
+  margin-top: 16px;
+}
+
+/* Recharts overrides */
+.recharts-wrapper {
+  background-color: #fff;
+  padding: 16px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+
+
+@media all and (max-width: 800px) {
+  .analyticsBox {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    padding: 4px;
+    width: 100%;
+    gap: 10px;
   }
-  to {
-    transform: rotate(360deg);
+  .divContainer {
+    background-color: #fff;
+    padding: 16px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%;
   }
+}
+.companyLogo
+{
+  position: absolute;
+  width:50px;
+  right:5px;
+
 }
